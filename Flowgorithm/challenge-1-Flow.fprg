@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="challenge-1-Flow"/>
+        <attribute name="authors" value="Azul"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-03-05 04:58:11 AM"/>
+        <attribute name="created" value="QXp1bDtERVNLVE9QLU41NEJNSDE7MjAyNi0wMy0wNTswMjo0NjoxNCBBTTsyNzA2"/>
+        <attribute name="edited" value="QXp1bDtERVNLVE9QLU41NEJNSDE7MjAyNi0wMy0wNTswNDo1ODoxMSBBTTszOzI4MTg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="quantity" type="Integer" array="False" size=""/>
+            <declare name="statusUser" type="String" array="False" size=""/>
+            <declare name="total" type="Real" array="False" size=""/>
+            <output expression="&quot;Are you a student?&quot;" newline="True"/>
+            <input variable="statusUser"/>
+            <output expression="&quot;How many teas would you like to drink?&quot;" newline="True"/>
+            <input variable="quantity"/>
+            <if expression="quantity &gt; 5 and statusUser == &quot;yes&quot;">
+                <then>
+                    <assign variable="total" expression="(5 * quantity) - (quantity * 0.2)"/>
+                </then>
+                <else>
+                    <if expression="quantity &gt; 5 or statusUser == &quot;yes&quot;">
+                        <then>
+                            <if expression="quantity &gt; 5">
+                                <then>
+                                    <assign variable="total" expression="5 * quantity - (quantity * 1)"/>
+                                </then>
+                                <else>
+                                    <assign variable="total" expression="5 * quantity - (5 * 0.2)"/>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <assign variable="total" expression="5 * quantity"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;Final Total: &quot; &amp; total" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
