@@ -18,11 +18,13 @@ while ($number >=1) {
 }
 
 # Even Number Detector
-$number = 2;
+$number = 1;
 
 while ($number <=20) {
+  if ($number %2== 0) {
   echo $number . "\n";
-  $number = $number + 2;
+  }
+  $number ++;
 }
 
 # Even Number Counter
