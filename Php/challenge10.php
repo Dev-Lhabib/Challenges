@@ -7,7 +7,7 @@ if(!isset($_SESSION["cart"])){
 
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
   $product = $_POST["product"];
-  
+
   if (!in_array($product,$_SESSION["cart"])){
     $_SESSION['cart'][] = $product;
   }
